@@ -1,0 +1,169 @@
+/* ------------------- GLOBAL ------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+}
+
+/* ------------------- HEADER ------------------- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 40px;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header h1 {
+    font-size: 32px;
+    color: #2c3e50;
+}
+
+.header nav {
+    display: flex;
+    gap: 25px;
+}
+
+.header nav li {
+    list-style: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.header nav li:hover {
+    color: #3498db;
+}
+
+/* ------------------- SEARCH BAR ------------------- */
+.search {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search input {
+    width: 60%;
+    padding: 12px 18px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.search input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52,152,219,0.3);
+}
+
+/* ------------------- PRODUCT GRID ------------------- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    padding: 30px;
+    gap: 30px;
+}
+
+/* ------------------- PRODUCT CARD ------------------- */
+.product-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    color: #2d4059;
+}
+
+.product-card p {
+    color: #555;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.product-card h4 {
+    color: #3498db;
+    font-size: 20px;
+    margin: 8px 0 15px;
+    font-weight: 600;
+}
+
+/* ------------------- BUTTON ------------------- */
+.product-card button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #3498db;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product-card button:hover {
+    background: #217dbb;
+}
+
+/* ------------------- MOBILE RESPONSIVE FIX ------------------- */
+@media (max-width: 600px) {
+    .search input {
+        width: 90%;
+    }
+
+    .header {
+        flex-direction: column;
+        padding: 15px;
+        gap: 12px;
+    }
+}
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: rgb(135, 135, 211);
+  background:yellow;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+header nav a:hover {
+  background: #62dbf0;
+  color: white;
+  transform: translateY(-2px);
+}
+
+header nav a:active {
+  transform: scale(0.95);
+}
